@@ -1,0 +1,2 @@
+# designick
+MY FIRST WEB PORTFOLIO

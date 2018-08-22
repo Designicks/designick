@@ -1,0 +1,763 @@
+body{
+	margin:0;
+	padding: 0;
+    background: #e9ecef;
+}
+@import url('https://fonts.googleapis.com/css?family=Asap|Questrial|Quicksand|Raleway|Ubuntu|Open+Sans');
+
+
+* ul li, a{
+	text-decoration: none;
+	list-style-type: none;
+}
+.row{
+	margin:0px;
+}
+/*--- Preloader--- */
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  /* change if the mask should have another color then white */
+  z-index: 2000 !important;
+  /* makes sure it stays on top */
+}
+
+#status {
+  width: 100%;
+  height:100%;
+  position: absolute;
+  /* centers the loading animation horizontally one the screen */
+  /* centers the loading animation vertically one the screen */
+  //background-image: url(https://raw.githubusercontent.com/niklausgerber/PreLoadMe/master/img/status.gif);
+  background-image: url(../images/preloader/infinite-preloader.gif);
+  background-size:initial;
+  /* path to your loading animation */
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 2000 !important;
+  /* is width and height divided by two */
+}
+/* font inclusion */
+@font-face {
+  font-family: FontAwesome;
+  src: url('../lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0');
+  font-display: fallback;
+}	
+
+@font-face {
+font-family: Asap;
+src: url(../fonts/Asap/asap.ttf);
+src: url(../fonts/Asap/asap.eot);
+src: url(../fonts/Asap/asap.svg);
+src: url(../fonts/Asap/asap.woff);
+src: url(../fonts/Asap/asap.woff2);
+font-display:fallback;
+}
+
+@font-face{
+font-family: Quicksand;
+src: url(../fonts/Quicksand/quicksand-regular.ttf);
+src: url(../fonts/Quicksand/quicksand-regular.woff2);
+src: url(../fonts/Quicksand/quicksand-regular.svg);
+src: url(../fonts/Quicksand/quicksand-regular.woff);
+font-display:fallback;
+}
+
+@font-face{
+font-family: OpenSans;
+src: url(../fonts/OpenSans/openSans.ttf);
+src: url(../fonts/OpenSans/openSans.woff);
+src: url(../fonts/OpenSans/openSans.woff2);
+src: url(../fonts/OpenSans/openSans.svg);
+font-display:fallback; 
+}
+@font-face{
+font-family: Ubuntu;
+src: url(../fonts/Ubuntu/ubuntu.ttf);
+src: url(../fonts/Ubuntu/ubuntu.svg);
+src: url(../fonts/Ubuntu/ubuntu.woff);
+src: url(../fonts/Ubuntu/ubuntu.woff2);
+font-display:fallback;
+}
+@font-face{
+font-family: Raleway;
+src: url(../fonts/Raleway/raleway.ttf);
+src: url(../fonts/Raleway/raleway.svg);
+src: url(../fonts/Raleway/raleway.woff);
+src: url(../fonts/Raleway/raleway.woff2);
+font-display:fallback;
+}
+@face-font{
+font-family:Questrial;
+src:url(../fonts/Questrial/questrial.ttf);
+src:url(../fonts/Questrial/questrial.svg);
+src:url(../fonts/Questrial/questrial.woff);
+src:url(../fonts/Questrial/questrial.woff2);
+font-display:auto;
+}
+
+body {
+  overflow: hidden;
+}
+
+/* -----------------------
+		# Top bar 
+-------------------------*/
+#topbar	{
+	background:#fff;
+	padding: 10px 0;
+	border:1px solid #eee;
+	position: relative;
+}
+
+#topbar .contact-info a,.phone_top,.social-links{
+	
+	font-family: Quicksand;
+	text-decoration: none;
+	color:#555;	
+	font-size: 18px;
+	text-align:center;
+}
+#topbar .contact-info i{
+	padding:5px 8px;
+	border-right:2px solid #eee;
+}
+#topbar .contact-info i:last-child{
+	border-right:none;
+}
+#topbar .social-links a:first-child{
+	border-left:none;
+}
+
+#topbar .social-links a{
+color:#555;
+padding:4px 8px;
+display: inline-block;
+ line-height: 1px;
+ border-left: 1px solid #e9e9e9;
+ padding-left:20px;
+}
+#topbar .social-links a:hover i{
+	color:#aaa;
+	transition: 0.3s; 	
+}
+#topbar .social-links a:last-child{
+	border-right:none;
+}
+.twitter,.facebook,.instagram,.google-plus,.linkedin,.github,.youtube,.whatsapp{	
+	margin:0px 5px;
+}
+
+/* -----------------------
+		# Header
+-------------------------*/
+nav{	
+	background:#ffffff; 
+	transition: all 0.5s;
+	z-index: 0;
+	box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.06);
+}	
+nav .navbar-brand{
+	width:100px;
+	transition: all 0.3s;
+}
+nav ul li{
+	font-family:Quicksand;
+	font-weight: 500;
+	font-size: 18px;
+	padding:0 15px;
+}
+nav .nav-item{
+	color:#eee;
+}
+nav .nav-item:hover
+{
+	color:#fff;
+}
+.navbar-light .navbar-nav .nav-link{
+	z-index:0;
+	color:#555;
+	font-weight: 700;
+}
+.navbar-light .navbar-nav .nav-link:hover{
+	color:#aaa;
+	transition: 0.2s;
+	font-weight: 700;
+}
+nav.navbar.shrink {
+  min-height: 10px;
+  background: #ffffff;
+}
+nav.navbar{
+    Animation
+   -webkit-transition: all 0.5s ease;
+   transition: all 0.5s ease;
+}
+nav.shrink a {
+  padding-top: 3px !important;
+  padding-bottom: 3px !important;
+  font-size: 17px;
+}
+nav .navbar-toggler-icon{
+	font-size:120%;
+	padding:2px;
+}
+nav.shrink .navbar-toggler-icon{
+	font-size:90%;
+	padding:2px;
+}
+
+nav.shrink .navbar-toggle {
+	width:20%;
+  	padding: 4px 5px;
+  	margin: 8px 15px 8px 0;
+  	background: #ffffff;
+}
+
+nav.shrink .navbar-brand {
+  width:6%;
+  padding:0;
+  margin:0;
+}
+
+@media only screen and (max-width: 640px){          
+ nav .navbar-brand{
+	width:70px;
+	transition: all 0.3s;
+	}
+}
+
+
+/* -----------------------
+		section #intro
+-------------------------*/
+
+#intro{
+  //width: 100%;
+  //height: 300px;
+  position: relative;
+  z-index: 11;
+}
+#intro .intro-content{
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+#intro .intro-content .btn-get-started, #intro .intro-content .btn-projects ,.buttons .btn-my-skills,.buttons .btn-my-portfolio{
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 32px;
+  border-radius: 2px;
+  transition: 0.5s;
+  margin: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+#intro .intro-content .btn-get-started,.buttons .btn-my-skills {
+  background: #555;
+  border: 2px solid #555;
+}
+
+#intro .intro-content .btn-get-started:hover {
+  background: none;
+  color: #555;
+}
+
+#intro .intro-content .btn-projects,.buttons .btn-my-portfolio {
+  background: #FF9800;
+  border: 2px solid #FF9800;
+}
+
+#intro .intro-content .btn-projects:hover {
+  background: none;
+  color: #FF9800;
+}
+.buttons .btn-my-portfolio:hover {
+  background: none;
+  color: #FF9800;
+}
+.buttons .btn-my-skills:hover {
+  background: none;
+  color: #555;
+}
+#intro_carousel img{
+	z-index:-2;
+}
+.intro-content h1{
+	font-size:8vw;
+	color:#fff;
+}
+.intro-content span{
+	color:#cc5de8;
+}
+.intro_carousel .image-1{
+	width:100%; 
+	display:block;
+}
+.intro_carousel .image-2{
+   display: none;
+}
+
+@media only screen and (max-width: 500px){          
+ .intro_carousel .image-1{
+     display: none;
+   }
+
+   .intro_carousel .image-2{
+   	width:100%;
+     display: block;
+   }
+}
+
+/*======ABOUT Section Starts======*/
+.about{
+	background: #fff;
+	
+}
+#gotoabout{
+	margin:0px auto !important;
+	padding:10% 0% 5%;
+}
+.about .row{
+	box-sizing: border-box;
+}
+.about .rounded-circle{ 
+	padding:10px;
+	border-radius:100%;
+	border:8px solid #555;
+	position: relative;
+}
+#MR_Nick, #modal_resume{
+	margin:0px auto !important;
+}
+.about .rounded-circle:hover{ 
+	border-radius:100%;
+	border:5px solid #fff;
+	transition: 0.4s;
+}
+.about img{
+	width:330px;
+	margin:0 auto;
+}
+.about .parah> h1{
+	padding:10px 0;
+	font-family: Raleway;
+	font-weight: 700;
+	color:#555;
+	font-size: 5vw;
+
+}
+.about .parah{
+	background:1d809f;
+	min-height:250px;
+	height:auto;
+	padding:5% 8%;
+	border-left:2px solid #555;
+	font-family: Quicksand;
+	font-weight: bold;
+}
+.hello .hey{
+	text-align: center;
+	padding:20px;
+}
+
+.hello{
+	width:100px;
+	height:100px;
+	position: absolute;
+	bottom:50%;
+	left:13%;
+	color:#fff;
+	background:#555;
+	opacity:0.7;
+	display:none;
+	z-index: 10;
+	border-radius:250px;
+}
+#MR_Nick:hover .hello{
+	display:block;	
+}
+.buttons{padding:0px;}
+.buttons .btn-my-portfolio,.buttons .btn-my-skills{
+	margin:20px 2px;
+}
+#modal_resume button{
+	margin:10% 0 10% 20%;
+	background:#555;
+	color:#fff;
+	border:2px solid #fff;
+	padding:10px 20px ;
+}
+#modal_resume button:hover{
+	background:none;
+	color:#555;
+	border:2px solid #555;
+	border-radius:5px;
+
+}
+.modal-content{
+	width:1200px;
+	height:750px;
+}
+.modal-body .myresume {
+	width:500px;
+}
+
+/*back to top arrow*/
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 25px;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+  transition:0.5s;
+}
+#myBtn{
+	-webkit-transition: all 0.3s ease;
+   	transition: all 0.3s ease;
+	border:1px solid  #FF9800;
+	border-radius: 100%;
+	background-color:#fff;
+	color:#FF9800;
+	opacity: 0.5;
+	
+}
+#myBtn:hover {
+   	background: #fff;
+   	opacity: 1;
+	color:#cc5de8;
+	border:1px solid #000;
+}
+
+@media only screen and (max-width: 600px){          
+.modal-content{
+	width:100%;
+	height:10%;
+    margin:0 auto;   
+ }
+ .modal-body .myresume {
+	width:100%;
+}
+}
+
+/* -----------------------
+		section .Feature 
+-------------------------*/
+#feature_content{
+	margin-top:10%;
+	padding-bottom:40px;
+}
+.myskills .progress{
+	width:100%;
+	height:100%;
+	border-radius:10PX;
+	border:1px solid #555;
+}
+.myskills .progress-bar{
+	font-size: 15px;
+	text-align: center;
+}
+.myskills .progress-bar{
+	width:100%;
+	height:60%;	
+}
+.myskills h4{
+	color:#fff;
+}
+.myskills .common-skills{
+	margin-top:20px;
+	padding-bottom:0;
+}
+.myskills .technical-tools {
+	font-family: quicksand;
+	font-weight: 600;
+	color:#fff;
+	margin:0 auto;
+}
+
+.myskills{
+	padding-bottom:40px;
+	background:#343a40;
+}
+.nav-pills a{
+	color:#fff !important;
+}
+.nav-pills a:hover{
+	color:#FF9800;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+	background:#FF9800;
+	color:#555;
+	border:1px solid #fff;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link:hover{
+	background:#FF9800;
+	border:1px solid #FF9800;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link a:hover{
+	color:#FF9800;
+}
+/* -----------------------
+		section .Portfolio
+-------------------------*/
+#portfolio h2{
+	font-family: quicksand;
+	font-weight: 600;
+	color:#555;
+	text-align:center;
+}
+#portfolio p{
+	font-weight: bold;
+	font-size:18px;
+	color:#FF9800;
+	padding:20px;
+}
+#portfolio {
+	font-family: raleway;
+  	background: #fff;
+  	padding: 8% 0;
+  	text-align: center;
+}
+#portfolio .portfolio-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+}
+#portfolio .portfolio-item {
+	height:250px;
+  	overflow: hidden;
+  	position: relative;
+  	padding: 0;
+  	vertical-align: middle;
+  	text-align: center;
+}
+#portfolio .portfolio-item h2 {
+  color: #ffffff;
+  font-size: 24px;
+  margin: 0;
+  font-weight: 650;
+}
+#portfolio .portfolio-item img {
+  width: 100%;
+ }
+#portfolio .portfolio-item:hover img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  transition: all ease-in-out 0.3s;
+   -webkit-transition: all ease-in-out 0.3s;
+}
+#portfolio .portfolio-item:hover .portfolio-overlay {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+#portfolio .portfolio-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/* Contact Section
+--------------------------------*/
+#contact{
+	font-family: quicksand;
+	font-weight: 500;
+    color:#fff;
+}
+#contact .bg_image{
+	background-image: url("../images/contact/browsing-business.jpg");
+	background-repeat: no-repeat;
+	background-size: 120%;
+	font-size:20px;
+	padding:7% 0 80px;
+}
+#contact .section-title{
+  	padding: 20px 0 ;
+	font-size:35px;
+	font-weight: 500;	
+	text-align: center;
+}
+.section-description{
+	padding:10px;
+    margin:0 auto;
+}
+#contact span{
+  	font-size:30px;
+  	color: #FF9800;
+  	text-align: center;
+ }
+
+#contact .address,.email,.phone{
+	padding:10px 0;
+    color:#fff;
+}
+#contact p{
+	padding: 10px 0px;
+	margin:0 auto;
+	text-align: center;
+}
+#contact .social-links {
+  padding-bottom: 20px;
+}
+.twitter2,.facebook2,.instagram2,.google-plus2,.linkedin2,.github2,.youtube2,.whatsapp2{
+	border-right: 5px solid #eee;
+}
+#contact img{
+	overflow: hidden;
+	width:100%;
+	height:auto; 
+}
+@media only screen and (max-width: 570px){          
+  #contact h3 .section-title{
+  	color:#fff;
+  }
+  #contact .common_center{
+  	text-align: center;
+  	margin:0 auto;
+  }
+}
+ @media only screen and (max-width: 767px){
+#contact p{
+  	color:#fff;
+	}
+#contact span{
+	color:#fff;
+	}
+	#contact .bg_image{
+	background-image: url("../images/contact/bgmin_browsing-business.jpg");
+	background-repeat: no-repeat;
+}
+}
+@media only screen and (max-width: 640px){
+  #contact p{
+  	color:#fff;
+	}
+	#contact .bg_image{
+	background-image: url("../images/contact/bgmin_browsing-business.jpg");
+	background-repeat: no-repeat;
+	background-size: 150%;
+	font-size:20px;
+}
+ }	
+
+/*----------------------
+Section Follow And Fill
+------------------------*/
+.follow-fill{
+	width:100%;
+	font-family: Quicksand;
+	background:#cc5de8; 
+}
+.follow-fill h2{
+	padding-top:20px;
+	text-align: center;
+	color:#fff;
+}
+#form{
+	width:80%;
+	margin:0 auto;
+}
+form button{
+	margin-left:15px;
+}
+.btn-primary{
+	background: #555;
+	color:#fff;
+	border:1px solid #fff;
+}
+.btn-primary:hover{
+	background: #fff;
+	color:#000;
+	border:1px solid #555;
+}
+.follow-fill{
+	box-sizing: content-box;
+	box-sizing: border-box;
+}
+.follow-fill .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  color: #fff;
+  padding: 10px 0;
+  border-radius: 100%;
+  text-align: center;
+  width: 44px;
+  height: 42px;
+  transition: 0.3s;
+  padding:10px;
+}
+.follow-fill .social-links a:hover{
+  background:#fff;  
+}
+.follow-fill .social-links a:hover i{
+  color: #555 !important;
+
+}
+form{
+	padding:10px 0 20px;
+}
+form label{
+	color:#fff;
+}
+
+/*-------------
+Section Footer
+--------------*/
+
+.footer{
+	font-family: Questrial;
+	background:#fff;
+	color:#555;
+	padding:10px;
+}
+.footer{
+	text-align: center;
+}
+.footer >span{
+	font-weight: 700;
+	color:#FF9800;
+} 
+.footer p{
+	margin:0;
+}
+#contact{
+	position: relative;
+	background: none;
+}
+#contact .back_img{
+	position:absolute;
+	z-index: -150;
+}
+.footer .web-url span{
+	font-family:Quicksand !important;
+	font-size: 15px;
+}
+
