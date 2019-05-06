@@ -647,8 +647,8 @@ nav.shrink .navbar-brand {
 }
 #portfolio {
 	font-family: raleway;
-  	//background: #fff;
-  	padding: 8% 0;
+  	background: none;
+  	padding: 5% 0;
   	text-align: center;
 }
 #portfolio .portfolio-overlay {
