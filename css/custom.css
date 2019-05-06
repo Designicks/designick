@@ -33,9 +33,8 @@ body{
   position: absolute;
   /* centers the loading animation horizontally one the screen */
   /* centers the loading animation vertically one the screen */
-  //background-image: url(https://raw.githubusercontent.com/niklausgerber/PreLoadMe/master/img/status.gif);
-  background-image: url(../images/preloader/infinite-preloader.gif);
-  background-size:initial;
+  background-image: url(../images/preloader/smile_d.gif);
+     background-size:70%;
   /* path to your loading animation */
   background-repeat: no-repeat;
   background-position: center;
@@ -43,7 +42,7 @@ body{
   /* is width and height divided by two */
 }
 /* font inclusion */
-@font-face {
+/*@font-face {
   font-family: FontAwesome;
   src: url('../lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0');
   font-display: fallback;
@@ -99,7 +98,7 @@ src:url(../fonts/Questrial/questrial.svg);
 src:url(../fonts/Questrial/questrial.woff);
 src:url(../fonts/Questrial/questrial.woff2);
 font-display:auto;
-}
+}*/
 
 body {
   overflow: hidden;
@@ -210,26 +209,75 @@ nav .navbar-toggler-icon{
 nav.shrink .navbar-toggler-icon{
 	font-size:90%;
 	padding:2px;
+	border:none !important;
 }
 
-nav.shrink .navbar-toggle {
-	width:20%;
+nav.shrink .navbar-toggler {
   	padding: 4px 5px;
-  	margin: 8px 15px 8px 0;
+  	margin: 8px 0;
   	background: #ffffff;
+  	border:none !important;
 }
 
 nav.shrink .navbar-brand {
-  width:6%;
+  width:50px;
   padding:0;
   margin:0;
 }
 
 @media only screen and (max-width: 640px){          
  nav .navbar-brand{
-	width:70px;
+	width:60px;
 	transition: all 0.3s;
 	}
+ #navbarResponsive{
+	text-align: center;
+	}	
+}
+@media only screen and (max-width: 990px){   
+ #navbarResponsive{
+	text-align: center;
+	}
+}
+/* styles for new menu bt  */
+
+.navbar-toggler{
+	display:none;
+}
+.menu_container {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+    border-radius: 40%;
+  
+}
+.bar1{
+  width: 35px;
+}
+.bar2{
+	width:25px;
+    margin-left:10px;
+}
+.bar3{
+	width:32px;
+    margin-left:3px;
+}
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);	
 }
 
 
@@ -255,7 +303,10 @@ nav.shrink .navbar-brand {
   align-items: center;
   flex-direction: column;
   text-align: center;
-}
+ }
+#intro .intro-content h1{
+	//font-size: 6vw;
+} 
 #intro .intro-content .btn-get-started, #intro .intro-content .btn-projects ,.buttons .btn-my-skills,.buttons .btn-my-portfolio{
   font-family: "Raleway", sans-serif;
   font-size: 15px;
@@ -301,11 +352,11 @@ nav.shrink .navbar-brand {
 	z-index:-2;
 }
 .intro-content h1{
-	font-size:8vw;
+	font-size:6vw;
 	color:#fff;
 }
 .intro-content span{
-	color:#cc5de8;
+	color:#FF9800;
 }
 .intro_carousel .image-1{
 	width:100%; 
@@ -325,6 +376,33 @@ nav.shrink .navbar-brand {
      display: block;
    }
 }
+
+
+
+
+/*======Update_box Section Starts======*/
+.update_box{
+	height:100px;
+	background: cyan;
+
+}
+.type-wrap{
+	font-family: quicksand;
+	text-align: center;
+	color: #fff;
+	background: #FF9800 !important;
+	height: 120px;
+	padding: 10px;
+	line-height: 100px;
+	box-sizing: border-box;
+}
+.type-wrap span{
+	white-space: unset !important;
+
+}
+
+
+/*======Update_box Ends======*/
 
 /*======ABOUT Section Starts======*/
 .about{
@@ -410,14 +488,30 @@ nav.shrink .navbar-brand {
 	color:#555;
 	border:2px solid #555;
 	border-radius:5px;
-
+}
+#modal_resume button a{
+	color: #fff;
 }
 .modal-content{
 	width:1200px;
-	height:750px;
+	height:860px;
 }
 .modal-body .myresume {
 	width:500px;
+}
+.btn_close i{
+	font-size: 20px;
+}
+.modal-footer button:hover{
+	background: #fff;
+	color: #555;
+}
+.modal-footer button a{
+	color: #fff;
+	text-decoration: none;
+}
+.modal-footer button a:hover{
+	color: #555;
 }
 
 /*back to top arrow*/
@@ -459,6 +553,24 @@ nav.shrink .navbar-brand {
  .modal-body .myresume {
 	width:100%;
 }
+}
+
+
+/* -----------------------
+		section .Services 
+-------------------------*/
+#services{
+	color: #fff;
+	background: #FF9800;
+	padding: 30px;
+	box-sizing: border-box;
+}
+.heading_services { 
+	text-align: center;
+	padding:70px 0;
+}
+.services>img{
+	width:900px;
 }
 
 /* -----------------------
@@ -627,6 +739,9 @@ nav.shrink .navbar-brand {
 #contact .social-links {
   padding-bottom: 20px;
 }
+.follow-fill .hr1,.follow-fill .hr2{
+
+}
 .twitter2,.facebook2,.instagram2,.google-plus2,.linkedin2,.github2,.youtube2,.whatsapp2{
 	border-right: 5px solid #eee;
 }
@@ -728,6 +843,27 @@ form label{
 	color:#fff;
 }
 
+
+
+.catchme_box{
+	width: 250px;
+	height: 150px;
+	position: fixed;
+	right: 0;
+	bottom: 60px;
+	border: 2px solid yellow;
+	border-radius:50px;
+	transition: all 0.3;
+}
+.catchme_box:hover{ 
+	background: orange;
+	color: #fff;
+}
+.catchme_box h3{
+	text-align: center;
+}
+
+
 /*-------------
 Section Footer
 --------------*/
@@ -760,3 +896,72 @@ Section Footer
 	font-family:Quicksand !important;
 	font-size: 15px;
 }
+
+
+/*TRAIL GALLERY*/
+
+.gallery {
+	padding: 20px;
+-webkit-column-count: 3;
+-moz-column-count: 3;
+column-count: 3;
+-webkit-column-width: 33%;
+-moz-column-width: 33%;
+column-width: 33%; }
+.gallery .pics {
+-webkit-transition: all 350ms ease;
+transition: all 350ms ease; }
+.gallery .animation {
+-webkit-transform: scale(1);
+-ms-transform: scale(1);
+transform: scale(1); }
+
+@media (max-width: 450px) {
+.gallery {
+-webkit-column-count: 1;
+-moz-column-count: 1;
+column-count: 1;
+-webkit-column-width: 100%;
+-moz-column-width: 100%;
+column-width: 100%;
+}
+}
+
+@media (max-width: 400px) {
+.btn.filter {
+padding-left: 1.1rem;
+padding-right: 1.1rem;
+}
+}
+
+.trial_gallery{
+	text-align: center;
+}
+.trial_gallery button{
+	background: #007bff;
+	font-size: 16px;
+	color: #fff;
+	border-radius: 50px;
+	padding: 10px;
+	border: 1px solid #007bff;
+}
+.trial_gallery button:hover{
+	border: 1px solid #007bff;
+	color: #007bff;
+	background: #fff;
+}
+
+.pics{
+	padding: 10px;
+	border: 1px solid #eee;
+}
+.pics:hover{
+	transform:scale(1.2);
+	position: sticky;
+	z-index: 5000 !important;
+	overflow: none;
+}
+
+
+
+/*TRIAL GALLERY*/
