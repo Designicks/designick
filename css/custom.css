@@ -954,11 +954,12 @@ padding-right: 1.1rem;
 .pics{
 	padding: 10px;
 	border: 1px solid #eee;
+	text-align: center;
 }
 .pics:hover{
 	transform:scale(1.2);
 	position: sticky;
-	z-index: 5000 !important;
+	z-index: 1000 !important;
 	overflow: none;
 }
 
