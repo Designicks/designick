@@ -797,7 +797,8 @@ Section Follow And Fill
 	color:#fff;
 }
 #form{
-	width:80%;
+	width: 100%;
+    max-width: 650px;
 	margin:0 auto;
 }
 form button{
